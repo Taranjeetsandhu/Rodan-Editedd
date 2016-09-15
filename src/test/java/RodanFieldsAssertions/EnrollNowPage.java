@@ -13,7 +13,7 @@ public class EnrollNowPage {
 	String beforeSelection;
 	String	Parent;
 
-	By becomeAConsultant=By.xpath(".//a[@id='corp-opp']");
+	By becomeAConsultant=By.xpath("//a[@id='corp-opp']");
 	By enroll=By.xpath("//div[@class='hidden-xs']//li[@id='BusinessSystemBar']//ul//li[2]//a");
 	By enterTest=By.xpath("//input[@id='sponserparam']");
 	By clickSearch=By.xpath("//button[@id='search-sponsor-button']");
@@ -24,7 +24,7 @@ public class EnrollNowPage {
 	By redefine=By.xpath("//div[@class='regimen-kit-selection-content row margin-0']/div[3]//span[1]");
 	By reverse=By.xpath("//div[@class='regimen-kit-selection-content row margin-0']/div[4]//span[1]");
 	By nextEnrollmentKit=By.xpath("//button[@id='next-button']");
-	By selectStandardEnrollment=By.xpath(".//div[@id='standard-enrollment']/div/span");
+	By selectStandardEnrollment=By.xpath("//div[@id='standard-enrollment']/div/span");
 	By nextEnrollmentType=By.xpath("//input[@id='next-button']");
 	By expressEnrollMent=By.xpath("//div[@class='enrollment-description col-xs-10']/span[1]");
 	By standardEnrollMent=By.xpath("//div[@class='enrollment-description col-xs-10']/span[2]");
