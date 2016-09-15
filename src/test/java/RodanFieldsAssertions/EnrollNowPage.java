@@ -22,14 +22,13 @@ public class EnrollNowPage {
 	By personalKit=By.xpath("//div[@class='enrollment-kits row']/div[3]//span");
 	By clickProduct=By.xpath("//div[@class='the-search-results']/div[1]//div[@class='sponsorDataDiv']");
 	By redefine=By.xpath("//div[@class='regimen-kit-selection-content row margin-0']/div[3]//span[1]");
-	By redefinetext=By.xpath("//div[@class='regimen-kit-selection-content row margin-0']/div[3]//div[@class='regimen-details-description']");
 	By reverse=By.xpath("//div[@class='regimen-kit-selection-content row margin-0']/div[4]//span[1]");
 	By nextEnrollmentKit=By.xpath("//button[@id='next-button']");
-	By standaradEnrollment=By.xpath(".//div[@id='standard-enrollment']/div/span");
+	By selectStandardEnrollment=By.xpath(".//div[@id='standard-enrollment']/div/span");
 	By nextEnrollmentType=By.xpath("//input[@id='next-button']");
-	By nextCreateAccount=By.xpath("//input[@id='enrollment-next-button']");
 	By expressEnrollMent=By.xpath("//div[@class='enrollment-description col-xs-10']/span[1]");
 	By standardEnrollMent=By.xpath("//div[@class='enrollment-description col-xs-10']/span[2]");
+	By nextCreateAccount=By.xpath("//input[@id='enrollment-next-button']");
 	By label=By.xpath("//form[@id='enrollmentForm']/div//label");
 	By firstName=By.xpath("//input[@placeholder='First Name']");
 	By lastName=By.xpath("//input[@placeholder='Last Name']");
@@ -82,8 +81,7 @@ public class EnrollNowPage {
 				break;
 
 			}
-			String s1=driver.findElement(redefinetext).getText();
-			System.out.println(s1);
+			
 		}}
 	
 	public boolean verifyRedefineIsSelected()
@@ -101,7 +99,7 @@ public class EnrollNowPage {
 	{
 		driver.findElement(nextEnrollmentKit).click();
 		Thread.sleep(5000);
-		driver.findElement(standaradEnrollment).click();
+		driver.findElement(selectStandardEnrollment).click();
 		
 		}
 
