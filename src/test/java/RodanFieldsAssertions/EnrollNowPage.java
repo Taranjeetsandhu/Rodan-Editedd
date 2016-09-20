@@ -27,9 +27,12 @@ public class EnrollNowPage {
 	By selectStandardEnrollment=By.xpath("//div[@id='standard-enrollment']/div/span");
 	By nextEnrollmentType=By.xpath("//input[@id='next-button']");
 	By expressEnrollMent=By.xpath("//div[@class='enroll-choose-type enrollment-type row']/div[1]//span[contains(@class,'checked')]");
+	By expressText=By.xpath("//div[@class='enroll-choose-type enrollment-type row']/div[4]/span[1]");
+	By standardText=By.xpath("//div[@class='enroll-choose-type enrollment-type row']/div[4]/span[2]");
 	By standardEnrollMent=By.xpath("//div[@class='enroll-choose-type enrollment-type row']/div[2]//span[contains(@class,'checked')]");
 	By nextCreateAccount=By.xpath("//input[@id='enrollment-next-button']");
-	By label=By.xpath("//form[@id='enrollmentForm']/div[1]//label");
+	By labelForFirstName=By.xpath("//form[@id='enrollmentForm']/div[1]/div[1]//label");
+	By labelForLastName=By.xpath("//form[@id='enrollmentForm']/div[1]/div[1]//label");
 	By firstName=By.xpath("//input[@placeholder='First Name']");
 	By lastName=By.xpath("//input[@placeholder='Last Name']");
 
@@ -103,9 +106,11 @@ public class EnrollNowPage {
 		
 		}
 
-	public boolean verifyUserSelectedExpress() throws InterruptedException{
+	public String verifyUserSelectedExpress() throws InterruptedException{
 		Thread.sleep(5000);
-		return driver.findElement(expressEnrollMent).isEnabled();
+		String s1=driver.findElement(expressText).getText();
+		System.out.println(s1);
+		return s1;
 
 	}
 
@@ -114,9 +119,12 @@ public class EnrollNowPage {
 		driver.findElement(selectStandardEnrollment).click();
 	}
 	
-	public boolean verifyUserSelectedStandard() throws InterruptedException{
+	public String verifyUserSelectedStandard() throws InterruptedException{
 		Thread.sleep(5000);
-		return driver.findElement(standardEnrollMent).isEnabled();
+		
+		String s2=driver.findElement(standardText).getText();
+		System.out.println(s2);
+		return s2;
 
 	}
 
@@ -130,11 +138,18 @@ public class EnrollNowPage {
 
 	}
 
-	public String verifyErrorMessage(){
+	public String verifyErrorMessageForFirstName(){
 
-		String s =driver.findElement(label).getText();
-		System.out.println(s);
-		return s;
+		String s3 =driver.findElement(labelForFirstName).getText();
+		System.out.println("Error message for First Name "+s3);
+		return s3;
+	}
+	
+	public String verifyErrorMessageForLastName(){
+
+		String s4 =driver.findElement(labelForLastName).getText();
+		System.out.println("Error message for Last Name "+s4);
+		return s4;
 	}
 
 	public void enterFirstAndLastName() throws InterruptedException{

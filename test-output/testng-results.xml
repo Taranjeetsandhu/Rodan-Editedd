@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="148126" started-at="2016-09-20T16:07:24Z" finished-at="2016-09-20T16:09:52Z">
+  <suite name="Default suite" duration-ms="110108" started-at="2016-09-20T17:16:27Z" finished-at="2016-09-20T17:18:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="148126" started-at="2016-09-20T16:07:24Z" finished-at="2016-09-20T16:09:52Z">
+    <test name="Default test" duration-ms="110108" started-at="2016-09-20T17:16:27Z" finished-at="2016-09-20T17:18:17Z">
       <class name="RodanFieldsAssertions.RodanAssertionsTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:RodanFieldsAssertions.RodanAssertionsTest@39582e88]" name="setUp" is-config="true" duration-ms="18053" started-at="2016-09-20T21:37:24Z" finished-at="2016-09-20T21:37:42Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:RodanFieldsAssertions.RodanAssertionsTest@63c99dae]" name="setUp" is-config="true" duration-ms="15547" started-at="2016-09-20T22:46:27Z" finished-at="2016-09-20T22:46:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="rodanFieldsTest1()[pri:0, instance:RodanFieldsAssertions.RodanAssertionsTest@39582e88]" name="rodanFieldsTest1" duration-ms="130055" started-at="2016-09-20T21:37:42Z" finished-at="2016-09-20T21:39:52Z">
+        <test-method status="PASS" signature="rodanFieldsTest1()[pri:0, instance:RodanFieldsAssertions.RodanAssertionsTest@63c99dae]" name="rodanFieldsTest1" duration-ms="94546" started-at="2016-09-20T22:46:42Z" finished-at="2016-09-20T22:48:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- rodanFieldsTest1 -->

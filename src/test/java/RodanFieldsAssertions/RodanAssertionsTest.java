@@ -38,11 +38,12 @@ public class RodanAssertionsTest {
 		Assert.assertTrue(enrollNow.verifyRedefineIsSelected(), "Redefine is not selected");	
 		Assert.assertTrue(enrollNow.verifyReverseIsNotSelected(),"Reverse is selected");
 		enrollNow.clickOnNextOnEnrollmentKit();
-		Assert.assertTrue(enrollNow.verifyUserSelectedExpress(),"You are not on Express page");
+		Assert.assertTrue(enrollNow.verifyUserSelectedExpress().contains("Express"),"You are not on Express page");
 		enrollNow.clickOnStandard();
-		Assert.assertTrue(enrollNow.verifyUserSelectedStandard(),"You are not on Standard page");	
+		Assert.assertTrue(enrollNow.verifyUserSelectedStandard().contains("Standard"),"You are not on Standard page");	
 		enrollNow.clickOnNextOnEnrollmentType();
-		Assert.assertTrue(enrollNow.verifyErrorMessage().contains("This field is required."),"No Error message is displayed");
+		Assert.assertTrue(enrollNow.verifyErrorMessageForFirstName().contains("This field is required."),"No Error message is displayed");
+		Assert.assertTrue(enrollNow.verifyErrorMessageForLastName().contains("This field is required."),"No Error message is displayed");
 		enrollNow.enterFirstAndLastName();
 	//	Assert.assertFalse(enrollNow.verifyErrorMessage().contains("This field is required."),"Error message is displayed");
 	}
