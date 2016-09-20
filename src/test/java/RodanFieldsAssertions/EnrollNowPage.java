@@ -21,15 +21,15 @@ public class EnrollNowPage {
 	By noEnabled=By.xpath("//div[@class='search-module']//span[contains(text(),'3')]");
 	By personalKit=By.xpath("//div[@class='enrollment-kits row']/div[3]//span");
 	By clickProduct=By.xpath("//div[@class='the-search-results']/div[1]//div[@class='sponsorDataDiv']");
-	By redefine=By.xpath("//div[@class='regimen-kit-selection-content row margin-0']/div[3]//span[1]");
-	By reverse=By.xpath("//div[@class='regimen-kit-selection-content row margin-0']/div[4]//span[1]");
+	By redefine=By.xpath("//div[@class='regimen-kit-selection-content row margin-0']/div[3]//span[contains(@class,'checked')]");
+	By reverse=By.xpath("//div[@class='regimen-kit-selection-content row margin-0']/div[4]//span[contains(@class,'unchecked')]");
 	By nextEnrollmentKit=By.xpath("//button[@id='next-button']");
 	By selectStandardEnrollment=By.xpath("//div[@id='standard-enrollment']/div/span");
 	By nextEnrollmentType=By.xpath("//input[@id='next-button']");
-	By expressEnrollMent=By.xpath("//div[@class='enrollment-description col-xs-10']/span[1]");
-	By standardEnrollMent=By.xpath("//div[@class='enrollment-description col-xs-10']/span[2]");
+	By expressEnrollMent=By.xpath("//div[@class='enroll-choose-type enrollment-type row']/div[1]//span[contains(@class,'checked')]");
+	By standardEnrollMent=By.xpath("//div[@class='enroll-choose-type enrollment-type row']/div[2]//span[contains(@class,'checked')]");
 	By nextCreateAccount=By.xpath("//input[@id='enrollment-next-button']");
-	By label=By.xpath("//form[@id='enrollmentForm']/div//label");
+	By label=By.xpath("//form[@id='enrollmentForm']/div[1]//label");
 	By firstName=By.xpath("//input[@placeholder='First Name']");
 	By lastName=By.xpath("//input[@placeholder='Last Name']");
 
@@ -86,12 +86,12 @@ public class EnrollNowPage {
 	
 	public boolean verifyRedefineIsSelected()
 	{
-		return	driver.findElement(redefine).isEnabled();
+			return driver.findElement(redefine).isEnabled();
 	}
 
 	public boolean verifyReverseIsNotSelected()
 	{
-		return	driver.findElement(reverse).isEnabled();
+			return driver.findElement(reverse).isEnabled();
 	}
 
 
@@ -99,17 +99,24 @@ public class EnrollNowPage {
 	{
 		driver.findElement(nextEnrollmentKit).click();
 		Thread.sleep(5000);
-		driver.findElement(selectStandardEnrollment).click();
+		
 		
 		}
 
-	public String verifyUserSelectedExpress(){
-		return driver.findElement(expressEnrollMent).getText();
+	public boolean verifyUserSelectedExpress() throws InterruptedException{
+		Thread.sleep(5000);
+		return driver.findElement(expressEnrollMent).isEnabled();
 
 	}
 
-	public String verifyUserSelectedStandard(){
-		return driver.findElement(standardEnrollMent).getText();
+	public void clickOnStandard() throws InterruptedException{
+		Thread.sleep(5000);
+		driver.findElement(selectStandardEnrollment).click();
+	}
+	
+	public boolean verifyUserSelectedStandard() throws InterruptedException{
+		Thread.sleep(5000);
+		return driver.findElement(standardEnrollMent).isEnabled();
 
 	}
 
@@ -130,10 +137,12 @@ public class EnrollNowPage {
 		return s;
 	}
 
-	public void enterFirstAndLastName(){
+	public void enterFirstAndLastName() throws InterruptedException{
 		driver.findElement(firstName).sendKeys("Taran");
+		Thread.sleep(5000);
 		driver.findElement(firstName).sendKeys(Keys.TAB);
 		driver.findElement(lastName).sendKeys("Kaur");
+		Thread.sleep(5000);
 		driver.findElement(lastName).sendKeys(Keys.TAB);
 	}
 }

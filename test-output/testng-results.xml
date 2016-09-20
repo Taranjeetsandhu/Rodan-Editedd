@@ -2,23 +2,19 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="137782" started-at="2016-09-15T07:13:58Z" finished-at="2016-09-15T07:16:16Z">
+  <suite name="Default suite" duration-ms="148126" started-at="2016-09-20T16:07:24Z" finished-at="2016-09-20T16:09:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="137782" started-at="2016-09-15T07:13:58Z" finished-at="2016-09-15T07:16:16Z">
+    <test name="Default test" duration-ms="148126" started-at="2016-09-20T16:07:24Z" finished-at="2016-09-20T16:09:52Z">
       <class name="RodanFieldsAssertions.RodanAssertionsTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:RodanFieldsAssertions.RodanAssertionsTest@68428693]" name="setUp" is-config="true" duration-ms="37302" started-at="2016-09-15T12:43:58Z" finished-at="2016-09-15T12:44:35Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:RodanFieldsAssertions.RodanAssertionsTest@39582e88]" name="setUp" is-config="true" duration-ms="18053" started-at="2016-09-20T21:37:24Z" finished-at="2016-09-20T21:37:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="rodanFieldsTest1()[pri:0, instance:RodanFieldsAssertions.RodanAssertionsTest@68428693]" name="rodanFieldsTest1" duration-ms="100409" started-at="2016-09-15T12:44:35Z" finished-at="2016-09-15T12:46:16Z">
+        <test-method status="PASS" signature="rodanFieldsTest1()[pri:0, instance:RodanFieldsAssertions.RodanAssertionsTest@39582e88]" name="rodanFieldsTest1" duration-ms="130055" started-at="2016-09-20T21:37:42Z" finished-at="2016-09-20T21:39:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- rodanFieldsTest1 -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:RodanFieldsAssertions.RodanAssertionsTest@68428693]" name="quitBrowser" is-config="true" duration-ms="55" started-at="2016-09-15T12:46:16Z" finished-at="2016-09-15T12:46:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
       </class> <!-- RodanFieldsAssertions.RodanAssertionsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

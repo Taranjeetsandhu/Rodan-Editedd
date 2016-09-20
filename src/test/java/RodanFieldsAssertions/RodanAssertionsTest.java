@@ -1,5 +1,4 @@
 
-
 package RodanFieldsAssertions;
 
 import org.testng.annotations.Test;
@@ -13,9 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.WebDriver;
 
-
 public class RodanAssertionsTest {
-
 
 	static WebDriver driver;
 	EnrollNowPage enrollNow;
@@ -41,21 +38,16 @@ public class RodanAssertionsTest {
 		Assert.assertTrue(enrollNow.verifyRedefineIsSelected(), "Redefine is not selected");	
 		Assert.assertTrue(enrollNow.verifyReverseIsNotSelected(),"Reverse is selected");
 		enrollNow.clickOnNextOnEnrollmentKit();
-		Assert.assertFalse(enrollNow.verifyUserSelectedExpress().contains("Express"),"You are on Express page");
-		Assert.assertTrue(enrollNow.verifyUserSelectedStandard().contains("Standard"),"You are not on Standard page");	
+		Assert.assertTrue(enrollNow.verifyUserSelectedExpress(),"You are not on Express page");
+		enrollNow.clickOnStandard();
+		Assert.assertTrue(enrollNow.verifyUserSelectedStandard(),"You are not on Standard page");	
 		enrollNow.clickOnNextOnEnrollmentType();
-		Assert.assertTrue(enrollNow.verifyErrorMessage().contains("This field is required."),"Wrong message");
+		Assert.assertTrue(enrollNow.verifyErrorMessage().contains("This field is required."),"No Error message is displayed");
 		enrollNow.enterFirstAndLastName();
-		
+	//	Assert.assertFalse(enrollNow.verifyErrorMessage().contains("This field is required."),"Error message is displayed");
 	}
-@AfterMethod
-	public void quitBrowser(){
-		driver.close();
-	}
+	//@AfterMethod
+	//	public void quitBrowser(){
+	//		driver.quit();
 }
-
-
-
-
-
 

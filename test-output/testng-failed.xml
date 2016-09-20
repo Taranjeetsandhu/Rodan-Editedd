@@ -5,7 +5,6 @@
     <classes>
       <class name="RodanFieldsAssertions.RodanAssertionsTest">
         <methods>
-          <include name="quitBrowser"/>
           <include name="rodanFieldsTest1"/>
           <include name="setUp"/>
         </methods>
