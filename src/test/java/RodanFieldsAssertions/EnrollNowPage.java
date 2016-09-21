@@ -44,7 +44,7 @@ public class EnrollNowPage {
 	public void clickOnEnrollNow() throws InterruptedException
 	{
 		driver.findElement(becomeAConsultant).click();
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		driver.findElement(enroll).click();
 		Thread.sleep(5000);
 

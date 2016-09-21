@@ -45,7 +45,7 @@ public class RodanAssertionsTest {
 		Assert.assertTrue(enrollNow.verifyErrorMessageForFirstName().contains("This field is required."),"No Error message is displayed");
 		Assert.assertTrue(enrollNow.verifyErrorMessageForLastName().contains("This field is required."),"No Error message is displayed");
 		enrollNow.enterFirstAndLastName();
-	//	Assert.assertFalse(enrollNow.verifyErrorMessage().contains("This field is required."),"Error message is displayed");
+
 	}
 	//@AfterMethod
 	//	public void quitBrowser(){
